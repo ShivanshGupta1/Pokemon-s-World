@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search Engine!</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             
+</head>
+<body>
+    <input type="text" id="2">
+   
+    <button type="submit" onclick="search()">Submit</button>
+      
+      <div class="loader" id="1" style="display: none;"></div>
+      
+
+  <div class="row" style="width:1000px; height:100px;">
+    <div class="col s12 m6">
+      <div class="card">
+     
+            <img id="3" style="width: 500px;" height="500px" src="">
+            
+          <span class="card-title" id="4">Card Title</span>
+          
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p id="5" >I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+</body>
+<style>
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-right: 16px solid green;
+        border-bottom: 16px solid red;
+        border-left: 16px solid pink;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        
+      }
+      
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+      <script>
+          let loader = document.getElementById("1")
+          let input = document.getElementById("2")
+          let img = document.getElementById("3")
+          let heading = document.getElementById("4")
+          let info = document.getElementById("5")
+          function search(){
+              loader.style.display = "block"
+              setTimeout(searchcont,3000)
+          }
+          function searchcont(){
+              let value = input.value
+            if (value=="pikachu"){
+                console.log("yo")
+                loader.style.display = "none"
+                document.getElementById("3").src = "Pikachu.png"
+                heading.innerHTML = "Pikachu"
+                info.innerHTML = "Pikachu are a electric type species of Pokémon, fictional creatures that appear in an assortment of video games, animated television shows and movies, trading card games, and comic books licensed by The Pokémon Company. They are yellow rodent-like creatures with powerful electrical abilities"
+
+
+            }
+            else if (value=="charmander"){
+                console.log("yo")
+                loader.style.display = "none"
+                document.getElementById("3").src = "charmander.png"
+                heading.innerHTML = "Charmander"
+                info.innerHTML = "Charmander, known as Hitokage in Japan, is a Pokémon species in Nintendo's and Game Freak's Pokémon franchise"
+
+
+            }
+            else if (value=="squirtle"){
+                console.log("yo")
+                loader.style.display = "none"
+                document.getElementById("3").src = "Squirtle.jpeg"
+                heading.innerHTML = "Squirtle"
+                info.innerHTML = "Squirtle, known as Zenigame in Japan, is a Pokémon species in Nintendo and Game Freak's Pokémon franchise. It was designed by Atsuko Nishida. Its name was changed from Zenigame to Squirtle during the English localization of the series in order to give it a clever name"
+
+
+            }
+            else if (value=="bulbasaur"){
+                console.log("yo")
+                loader.style.display = "none"
+                document.getElementById("3").src = "bulbasaur.png"
+                heading.innerHTML = "Bulbasaur"
+                info.innerHTML = "Bulbasaur, known as Fushigidane in Japan, is the first Pokémon in Nintendo and Game Freak's Pokémon franchise's monster dictonary, called a PokéDex. Designed by Atsuko Nishida, Bulbasaur debuted in Pokémon Red and Green as a Starter Pokémon"
+
+
+            }
+            else if (value=="mudkip"){
+                console.log("yo")
+                loader.style.display = "none"
+                document.getElementById("3").src = "mudkip.png"
+                heading.innerHTML = "Mudkip"
+                info.innerHTML = "Mudkip, known in Japan as Mizugorou, is a Pokémon species in Nintendo and Game Freak's Pokémon franchise"
+
+
+            }
+          }
+      </script>
+</html>
